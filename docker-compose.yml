@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    container_name: queuestorm_api
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      WORKERS: 2
+    restart: unless-stopped
